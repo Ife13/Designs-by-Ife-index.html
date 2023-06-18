@@ -32,30 +32,61 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="text-center">
     <!-- header -->
-    <header class="header-area">
-      <div class="navbar-area">
-        <nav class="site-navbar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="aboutme.html">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="photography.html">Photography</a></li>
-          </ul>
-          <button>
-            <a
-              href="https://ife13.github.io/CV/?fbclid=IwAR34CMY6kyUCAO9-qXDzH0xYEIppzz9DExx08ReWAN1wO-DRPdJSOVQNUbw"
-              >CV</a
-            >
+    <nav class="navbar navbar-expand-lg d-flex flex-nowrap">
+      <div
+        class="container-fluid border border-2 border-dark rounded-pill px-3 py-2 bg-light w-75"
+      >
+        <!-- MENU TOGGLE -->
+        <div class="navbar-header">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
-        </nav>
+        </div>
+        <div class="collapse navbar-collapse d-flex" id="navbarNav">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="aboutme.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#work">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="photography.html">Photography</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav m-auto">
+            <a class="navbar-brand" href="index.html">DBI</a>
+          </ul>
+          <ul class="nav navbar-nav ms-auto">
+            <button
+              type="button"
+              class="btn btn-info navbar-btn rounded-pill"
+              style="min-width: 80px"
+            >
+              <a
+                class="nav-link p-1"
+                href="https://ife13.github.io/CV/?fbclid=IwAR34CMY6kyUCAO9-qXDzH0xYEIppzz9DExx08ReWAN1wO-DRPdJSOVQNUbw"
+                >CV</a
+              >
+            </button>
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
     <!-- end header inner -->
     <div>
       <h1>About Me</h1>
-      <p>
+      <p class="mw-50 p-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam officia
         officiis obcaecati est modi accusantium libero doloremque! Maiores
         consequatur ducimus repellendus ab eveniet ratione odio magnam vitae
@@ -66,34 +97,31 @@
         laudantium repellat odit nihil pariatur officiis commodi cum perferendis
         saepe, harum modi excepturi magni doloribus distinctio delectus. Minima
         non cumque ea architecto odio ab autem iusto delectus est. Recusandae
-        est, eaque adipisci eveniet nesciunt enim aliquid id porro. Tenetur
-        exercitationem, ipsam perspiciatis dolor magni unde culpa obcaecati.
-        Repellendus possimus fugit magni, ex natus esse distinctio quasi
-        temporibus exercitationem, aut aliquid porro eos corrupti nostrum iure
-        numquam. Sed illum architecto id optio qui aut ut delectus non maiores
-        quisquam obcaecati, sunt nemo iure voluptate nulla minus rem! Molestias
-        nobis tempore adipisci cumque ipsum dolorum. Dolores iste aliquid, minus
-        nam officiis repudiandae modi delectus, eum voluptate architecto
-        voluptas. Delectus in quae facere. Molestias, expedita laudantium. Quod
-        voluptas molestias, ea labore reprehenderit minima numquam. Voluptates,
-        excepturi eaque dolorem adipisci debitis velit magni suscipit.
+        est, eaque adipisci eveniet nesciunt enim aliquid id porro.
       </p>
-      <img src="" alt="a photo of me" />
+      <img
+        src="../assets/web profile.png"
+        alt="a photo of me"
+        class="rounded img-fluid"
+        style="max-width: 300px"
+      />
     </div>
     <!-- footer -->
     <footer>
-      <div>
-        <p>© 2023 All Rights Reserved. Design by Ife Njock-Barnes</p>
-        <p>Contact Me.</p>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/ife-njock-barnes-422448189"
-          ><i class="fa-brands fa-linkedin"></i></a
-        ><a target="_blank" href="https://github.com/Ife13"
-          ><i class="fa-brands fa-github"></i></a
-        ><a target="_blank" href="https://www.instagram.com/ife_design"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
+      <div class="d-flex justify-content-between">
+        <p>© 2023 All Rights Reserved. Designed by Ife Njock-Barnes</p>
+        <div class="d-flex justify-content-between">
+          <p class="px-2">Contact Me.</p>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/ife-njock-barnes-422448189"
+            ><i class="fa-brands fa-linkedin px-3"></i></a
+          ><a target="_blank" href="https://github.com/Ife13"
+            ><i class="fa-brands fa-github px-3"></i></a
+          ><a target="_blank" href="https://www.instagram.com/ife_design"
+            ><i class="fa-brands fa-instagram px-3"></i
+          ></a>
+        </div>
       </div>
     </footer>
   </body>
