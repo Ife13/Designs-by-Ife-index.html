@@ -1,10 +1,4 @@
-$backgroundColor: #faedcd;
-$green: #596157;
-$brown: #473335;
-$cream: #fefae0;
-
 @import url("https://fonts.googleapis.com/css2?family=Righteous?family=Zen+Loop&display=swap");
-
 .bg-gradient {
   background-image: url("../assets/background.png") no-repeat;
   height: 100vh;
@@ -12,23 +6,30 @@ $cream: #fefae0;
 }
 
 .bg-main {
-  background-color: $backgroundColor;
+  background-color: #faedcd;
 }
+
 .bg-cream {
-  background-color: $cream;
+  background-color: #fefae0;
 }
+
 .bg-green {
-  background-color: $green;
+  background-color: #596157;
 }
+
 .bg-brown {
-  background-color: $brown;
-} /*# sourceMappingURL=style.css.map */
+  background-color: #473335;
+} 
 .text-cream {
-  color: $cream;
+  color: #fefae0;
 }
+
 .text-brown {
-  color: $brown;
+  color: #473335;
 }
+
 .border-brown {
-  border-color: $brown;
+  border-color: #473335;
 }
+
+/*# sourceMappingURL=style.css.map */
