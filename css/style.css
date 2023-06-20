@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous?family=Zen+Loop&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Zen+Loop&display=swap");
 .bg-gradient {
   background-image: url("../assets/background.png") no-repeat;
   height: 100vh;
@@ -29,7 +29,39 @@
 }
 
 .border-brown {
+  border-style: solid;
+  border-width: 2px;
   border-color: #473335;
+}
+
+.text-green {
+  color: #596157;
+}
+
+.text-green:hover {
+  color: #473335;
+  transform: scale(1.3, 1.3);
+  transform: rotate(20);
+}
+
+.text-nav {
+  color: #596157;
+}
+
+.text-nav:hover {
+  color: #faedcd;
+}
+
+.text-nav:active {
+  color: #473335;
+}
+
+.font1 {
+  font-family: "Righteous", "sans-serif";
+}
+
+.font2 {
+  font-family: "Zen Loop", "sans-serif";
 }
 
 /*# sourceMappingURL=style.css.map */

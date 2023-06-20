@@ -35,11 +35,11 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="text-center bg-main">
+  <body class="text-center bg-main min-vh-100" style="box-sizing: border-box">
     <!-- header -->
-    <nav class="navbar navbar-expand-lg d-flex flex-nowrap">
+    <nav class="navbar navbar-expand-lg d-flex flex-nowrap font1">
       <div
-        class="container-fluid border border-2 border-dark rounded-pill px-3 py-2 bg-cream w-75"
+        class="container-fluid border-brown rounded-pill px-3 py-2 w-75 bg-cream"
       >
         <!-- MENU TOGGLE -->
         <div class="navbar-header">
@@ -55,29 +55,28 @@
         <div class="collapse navbar-collapse d-flex" id="navbarNav">
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link text-nav" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutme.html">About</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#work">Work</a>
+              <a class="nav-link text-nav" href="aboutme.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="photography.html">Photography</a>
+              <a class="nav-link text-nav active" href="#work">Work</a>
             </li>
-          </ul>
-          <ul class="nav navbar-nav m-auto">
-            <a class="navbar-brand" href="index.html">DBI</a>
+            <li class="nav-item">
+              <a class="nav-link text-nav" href="photography.html"
+                >Photography</a
+              >
+            </li>
           </ul>
           <ul class="nav navbar-nav ms-auto">
             <button
               type="button"
-              class="btn btn-info navbar-btn rounded-pill"
+              class="btn bg-green navbar-btn rounded-pill"
               style="min-width: 80px"
             >
               <a
-                class="nav-link p-1"
+                class="nav-link p-1 text-cream"
                 href="https://ife13.github.io/CV/?fbclid=IwAR34CMY6kyUCAO9-qXDzH0xYEIppzz9DExx08ReWAN1wO-DRPdJSOVQNUbw"
                 >CV</a
               >
@@ -87,17 +86,19 @@
       </div>
     </nav>
     <!-- end header inner -->
-    <h1>Project title</h1>
-    <!-- image carousel -->
-    <div>
-      <span>&#8249;</span>
-      <img src="" alt="image" />
-      <span>&#8250;</span>
+    <div class="border-brown border-bottom-0 rounded mx-2">
+      <h1 class="font1 display-1 pt-3">Project title</h1>
+      <!-- image carousel -->
+      <div style="height: 80vh">
+        <span>&#8249;</span>
+        <img src="" alt="image" />
+        <span>&#8250;</span>
+      </div>
+      <span></span>
+      <!-- end of carousel -->
     </div>
-    <span></span>
-    <!-- end of carousel -->
-    <div>
-      <p>
+    <div class="bg-brown">
+      <p class="font2 h4 p-5 text-cream">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam,
         numquam nobis vero dolorem atque consequatur laboriosam illo facilis.
         Reprehenderit earum inventore quod illum commodi cupiditate eius nam
@@ -119,34 +120,29 @@
         Voluptas eos doloremque consequatur. Quaerat iure odit, iste dolores
         itaque quidem? Sequi aspernatur, modi repellendus harum dolor labore
         placeat soluta nemo delectus, ducimus optio mollitia in impedit tempora
-        ea facilis! Alias nostrum, aliquid officiis laboriosam itaque
-        voluptates. Ut eveniet, ratione unde nihil impedit animi dolores
-        doloremque ipsam necessitatibus laboriosam quisquam odit consectetur
-        officiis distinctio, tenetur possimus quas laborum atque ad excepturi
-        dolor, praesentium cumque commodi. Ex iusto officiis incidunt maiores
-        quis eaque iure! Esse aut odio voluptate minus porro beatae tempora. Ad
-        expedita deleniti corrupti. Deserunt assumenda alias provident
-        accusantium eos, possimus beatae fuga soluta et consequatur nihil nemo
-        dignissimos quas vel eveniet doloremque quibusdam odio rem iure sed.
-        Molestias deleniti, ducimus repellat dolorum fuga tenetur rem error
-        placeat quisquam ipsum inventore et debitis earum animi quibusdam
-        accusantium quas enim.
+        ea facilis!
       </p>
     </div>
+
     <!-- footer -->
-    <footer>
-      <div class="d-flex justify-content-between bg-cream">
-        <p>© 2023 All Rights Reserved. Designed by Ife Njock-Barnes</p>
-        <div class="d-flex justify-content-between">
+    <footer style="position: relative" class="mt-4 font2 fs-5">
+      <div
+        class="d-flex justify-content-between bg-cream text-brown"
+        style="position: absolute; bottom: 0; width: 100%; height: 2.5rem"
+      >
+        <p class="p-2">
+          © 2023 All Rights Reserved. Designed by Ife Njock-Barnes
+        </p>
+        <div class="d-flex justify-content-between p-2">
           <p class="px-2">Contact Me.</p>
           <a
             target="_blank"
             href="https://www.linkedin.com/in/ife-njock-barnes-422448189"
-            ><i class="fa-brands fa-linkedin px-3"></i></a
+            ><i class="fa-brands fa-linkedin px-3 text-green"></i></a
           ><a target="_blank" href="https://github.com/Ife13"
-            ><i class="fa-brands fa-github px-3"></i></a
+            ><i class="fa-brands fa-github px-3 text-green"></i></a
           ><a target="_blank" href="https://www.instagram.com/ife_design"
-            ><i class="fa-brands fa-instagram px-3"></i
+            ><i class="fa-brands fa-instagram px-3 text-green"></i
           ></a>
         </div>
       </div>
