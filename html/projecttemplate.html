@@ -34,6 +34,55 @@
       src="https://kit.fontawesome.com/e284b4c2ef.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .carousel {
+        position: relative;
+      }
+      .numbertext {
+        position: absolute;
+      }
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      .active2,
+      .dot:hover {
+        background-color: #473335;
+      }
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      /* Fading animation  */
+      .fade2 {
+        animation-name: fade2;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade2 {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .carousel-caption {
+          font-size: 11px;
+        }
+      }
+    </style>
   </head>
   <body class="text-center bg-main min-vh-100" style="box-sizing: border-box">
     <!-- header -->
@@ -88,68 +137,83 @@
       </div>
     </nav>
     <!-- end header inner -->
-    <div class="border-brown border-bottom-0 rounded mx-2" style="height: 80vh">
-      <h1 class="font1 display-1 pt-3">Project title</h1>
-      <!-- image carousel -->
-      <div
-        class="d-flex justify-content-center align-items-center"
-        style="height: 50vh"
-      >
-        <!-- carousel -->
-        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+    <div
+      class="border-brown border-bottom-0 rounded mx-2"
+      style="height: 100vh"
+    >
+      <h1 class="font1 display-1 pt-3">Project 1</h1>
+      <!-- carousel -->
+      <div class="m-2 d-flex justify-content-center pt-2">
+        <div id="slideshow" class="carousel slide w-75" data-ride="carousel">
+          <!-- slides -->
           <div class="carousel-inner">
-            <div class="carousel-item active" style="width: 300px">
+            <div class="carousel-item fade2 active">
+              <div class="numbertext font2 text-brown p-3">1 / 3</div>
               <img
                 src="../assets/web profile.png"
-                class="d-block w-100"
-                alt="..."
+                class="mw-100"
+                alt="slide1"
               />
+              <div class="carousel-caption font1 text-cream">Caption One</div>
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item fade2">
+              <div class="numbertext font2 text-brown p-3">2 / 3</div>
               <img
                 src="../assets/web profile.png"
-                class="d-block w-100"
-                alt="..."
+                class="mw-100"
+                alt="slide2"
               />
+              <div class="carousel-caption font1 text-cream">Caption Two</div>
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item fade2">
+              <div class="numbertext font2 text-brown p-3">3 / 3</div>
               <img
                 src="../assets/web profile.png"
-                class="d-block w-100"
-                alt="..."
+                class="mw-100"
+                alt="slide3"
               />
+              <div class="carousel-caption font1 text-cream">Caption Three</div>
             </div>
           </div>
-          <!-- carousel controls -->
+          <!-- Navigation arrows -->
           <a
-            class="carousel-control-prev"
-            href="#imageCarousel"
+            class="prev carousel-control-prev"
+            href="#slideshow"
             role="button"
             data-slide="prev"
+            onclick="plusSlides(-1)"
+            ><span
+              class="carousel-control-prev-icon text-cream"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Previous</span></a
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
-            <span class="sr-only">Previous</span>
-          </a>
-
           <a
-            class="carousel-control-next"
-            href="#imageCarousel"
+            class="next carousel-control-next"
+            href="#slideshow"
             role="button"
             data-slide="next"
+            onclick="plusSlides(1)"
+            class="text-decoration-none"
+            ><span
+              class="carousel-control-next-icon text-cream"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Next</span></a
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
-            <span class="sr-only">Next</span>
-          </a>
+          <br />
+          <!-- dots -->
+          <div class="">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
         </div>
       </div>
-      <span>&#x2B24;</span> <span>&#x2B24;</span> <span>&#x2B24;</span>
-      <span>&#x2B24;</span>
-      <!-- end of carousel -->
     </div>
+    <!-- end of carousel -->
     <div class="bg-brown container-fluid">
       <div class="container">
         <p class="mw-100 font2 h4 p-5 text-cream">
@@ -203,16 +267,36 @@
       </div>
     </footer>
     <script>
-      $(document).ready(function () {
-        // Activate the carousel
-        $("#imageCarousel").carousel();
+      let slideIndex = 1;
+      showSlides(slideIndex);
 
-        // Enable carousel indicators click
-        $(".carousel-indicators li").click(function () {
-          var slideTo = $(this).attr("data-slide-to");
-          $("#imageCarousel").carousel(parseInt(slideTo));
-        });
-      });
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("carousel-item");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active2", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active2";
+      }
     </script>
   </body>
 </html>
