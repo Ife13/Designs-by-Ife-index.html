@@ -25,7 +25,7 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
@@ -36,7 +36,6 @@
       src="https://kit.fontawesome.com/e284b4c2ef.js"
       crossorigin="anonymous"
     ></script>
-  <script src="../js/carousel.js" ></script>
     <style>
       .carousel {
         position: relative;
@@ -175,7 +174,7 @@
     <div class="border-brown rounded mx-2">
       <h1 class="font1 display-1 pt-3 text-brown">Project 1</h1>
       <!-- carousel -->
-      <div id="simpleCarouselExample" class="carousel" data-ride="carousel">
+      <div id="simpleCarouselExample" class="carousel slide" data-ride="carousel">
         <!-- indicators -->
         <ul class="carousel-indicators" style="z-index: 0;">
           <li data-target="#simpleCarouselExample" data-slide-to="0" class="active">&bull;</li>
@@ -249,6 +248,14 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var carousel = document.getElementById("simpleCarouselExample");
+        var carouselInstance = new bootstrap.Carousel(carousel, {
+          interval: 5000, // Adjust the interval as needed
+        });
+      });
+    </script>
     <script>
       /* When the user clicks on the button,
       toggle between hiding and showing the dropdown content */
