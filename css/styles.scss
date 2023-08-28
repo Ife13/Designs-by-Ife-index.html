@@ -40,7 +40,9 @@ $secondary-font: "Zen Loop", "sans-serif";
   color: $green;
 }
 .text-nav:hover {
-  color:  $brown;
+  color: $backgroundColor;
+  background-color: hsla(354, 16%, 24%, 0.5);
+  border-radius: 10px;
 }
 .text-nav:active {
   color: $brown;
@@ -50,5 +52,5 @@ $secondary-font: "Zen Loop", "sans-serif";
 }
 .font2 {
   font-family: $secondary-font;
-  font-weight: 800;
+  font-weight: 1000;
 }

@@ -43,6 +43,8 @@
 
 .text-nav:hover {
   color: #faedcd;
+  background-color: hsla(354, 16%, 24%, 0.5);
+  border-radius: 10px;
 }
 
 .text-nav:active {
@@ -55,7 +57,7 @@
 
 .font2 {
   font-family: "Zen Loop", "sans-serif";
-  font-weight: 600;
+  font-weight: 1000;
 }
 
 /*# sourceMappingURL=style.css.map */
