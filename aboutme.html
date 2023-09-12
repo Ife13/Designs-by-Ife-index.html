@@ -71,15 +71,30 @@
         background-color: #473335;
         color: #fefae0;
       }
-      input[type=text], textarea {
+      input[type="text"],
+      textarea {
         width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
+        padding: 12px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
       }
     </style>
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-W20P989D3T"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-W20P989D3T");
+  </script>
   <body class="text-center bg-main min-vh-100" style="box-sizing: border-box">
     <!-- header -->
     <div
